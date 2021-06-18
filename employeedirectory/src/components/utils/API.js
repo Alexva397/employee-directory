@@ -5,6 +5,6 @@ import axios from 'axios';
 
 export default {
     generateRandom: function() {
-        return axios.get('https://randomuser.me/api/?results=20');
+        return axios.get('https://randomuser.me/api/?results=200&nat=us');
     }
 }

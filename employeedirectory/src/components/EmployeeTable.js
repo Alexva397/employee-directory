@@ -1,7 +1,4 @@
-
-
 const EmployeeTable = (props) => {
-    console.log(props)
     return (
         <div>
             <table className="table table-striped">
@@ -29,8 +26,7 @@ const EmployeeTable = (props) => {
                             <td></td>
                         </tr>
                         )
-                    })
-                    }
+                    })}
                 </tbody>
             </table>
         </div>
