@@ -14,7 +14,7 @@ const EmployeeTable = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {props.employees.map((employee) => {
+                    {props.filteredEmployees.map((employee) => {
                         return (
                         <tr key={employee.login.uuid}>
                             <td>{employee.name.last}</td>

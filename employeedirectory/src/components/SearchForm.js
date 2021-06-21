@@ -11,8 +11,12 @@ const SearchForm = (props) => {
                     placeholder="Search by last name" 
                 />
                 <div className="input-group-append">
-                    <button className="btn btn-outline-secondary" type="button">Search</button>
-                </div>
+                    <button 
+                        className="btn btn-outline-secondary" 
+                        type="button"
+                        onClick={props.handleFormSubmit}
+                    >Search</button>
+                </div>  
             </div>
         </form>  
     );
