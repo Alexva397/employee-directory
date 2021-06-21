@@ -30,8 +30,7 @@ class EmployeeContainer extends Component {
         this.setState({
              search: event.target.value 
         });
-        // this.filterEmployees(this.state.search.toLowerCase().trim());
-        // console.log(this.state.search);
+        this.filterEmployees(this.state.search.toLowerCase().trim());
     };
 
     handleFormSubmit = event => {
@@ -39,8 +38,7 @@ class EmployeeContainer extends Component {
 
         console.log(this.state.search);
         this.filterEmployees(this.state.search.toLowerCase().trim());
-        console.log(this.state.search);
-    }
+    };
 
 
 
@@ -62,7 +60,9 @@ class EmployeeContainer extends Component {
 
 
 
+    // sortEmployees = (input) => {
 
+    // };
 
 
 

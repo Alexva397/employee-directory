@@ -4,6 +4,7 @@ const EmployeeTable = (props) => {
             <table className="table table-striped">
                 <thead className="thead-dark">
                     <tr>
+                        <th scope="col">Photo</th>
                         <th scope="col">Last Name</th>
                         <th scope="col">First Name</th>
                         <th scope="col">DOB</th>
@@ -17,6 +18,7 @@ const EmployeeTable = (props) => {
                     {props.filteredEmployees.map((employee) => {
                         return (
                         <tr key={employee.login.uuid}>
+                            <td><img src={employee.picture.thumbnail} alt={employee.name.last}></img></td>
                             <td>{employee.name.last}</td>
                             <td>{employee.name.first}</td>
                             <td>{employee.dob.date}</td>
