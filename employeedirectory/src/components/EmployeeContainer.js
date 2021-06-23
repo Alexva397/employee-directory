@@ -15,7 +15,6 @@ class EmployeeContainer extends Component {
     };
 
 
-
     componentDidMount() {
         API.generateRandom()
         .then(res => {
@@ -42,8 +41,6 @@ class EmployeeContainer extends Component {
         this.filterEmployees(this.state.search.toLowerCase().trim());
     };
 
-
-
     filterEmployees = (search) => {
         if (search) {
           this.setState({
@@ -58,20 +55,18 @@ class EmployeeContainer extends Component {
         } else {
           this.setState({ filteredEmployees: this.state.employees });
         }
-      };
-
-
+    };
 
     sortEmployees = (input) => {
        let sortedEmployees = this.state.filteredEmployees.sort((a, b) => {
-         a = a.name[input];
-         b = b.name[input]; 
+        //  a = a[input];
+        //  b = b[input]; 
 
         //  return a.localeCompare(b);
-        if (a > b) {
+        if (a[input] > b[input] || a.name[input] > b.name[input]) {
             return 1;
         }
-        if (a < b) {
+        if (a[input] < b[input] || a.name[input] < b.name[input]) {
             return -1;
         }
         return 0;
@@ -81,8 +76,6 @@ class EmployeeContainer extends Component {
            filteredEmployees: sortedEmployees
        })
     };
-
-
 
 
     render() {

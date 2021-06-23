@@ -4,21 +4,25 @@ const EmployeeTable = (props) => {
             <table className="table table-striped">
                 <thead className="thead-dark">
                     <tr>
-                        <th scope="col">Photo</th>
-                        <th scope="col">
+                        <th scope="col" className="m-1 align-middle">Photo</th>
+                        <th scope="col" className="m-1 align-middle">
                             <span
                                 onClick={() => props.sortEmployees("last")}
-                            >Last Name</span>
+                            >Last Name </span><i className="fas fa-sort-down align-top"></i>
                         </th>
-                        <th scope="col">
+                        <th scope="col" className="m-1 align-middle">
                             <span
                                 onClick={() => props.sortEmployees("first")}
-                            >First Name</span>
+                            >First Name </span><i className="fas fa-sort-down align-top"></i>
                         </th>
-                        <th scope="col">DOB</th>
-                        <th scope="col">Gender</th>
-                        <th scope="col">Cell Phone</th>
-                        <th scope="col">Email</th>
+                        <th scope="col" className="m-1 align-middle">DOB</th>
+                        <th scope="col" className="m-1 align-middle">Gender</th>
+                        <th scope="col" className="m-1 align-middle">Cell Phone</th>
+                        <th scope="col" className="m-1 align-middle">
+                            <span
+                                onClick={() => props.sortEmployees("email")}
+                            >Email </span><i className="fas fa-sort-down align-top"></i>
+                        </th>
                         <th scope="col">Address</th>
                     </tr>
                 </thead>
@@ -26,14 +30,14 @@ const EmployeeTable = (props) => {
                     {props.filteredEmployees.map((employee) => {
                         return (
                         <tr key={employee.login.uuid}>
-                            <td><img src={employee.picture.thumbnail} alt={employee.name.last}></img></td>
-                            <td>{employee.name.last}</td>
-                            <td>{employee.name.first}</td>
-                            <td>{employee.dob.date}</td>
-                            <td>{employee.gender}</td>
-                            <td>{employee.cell}</td>
-                            <td>{employee.email}</td>
-                            <td></td>
+                            <td className="align-middle"><img src={employee.picture.thumbnail} alt={employee.name.last}></img></td>
+                            <td className="align-middle">{employee.name.last}</td>
+                            <td className="align-middle">{employee.name.first}</td>
+                            <td className="align-middle">{employee.dob.date}</td>
+                            <td className="align-middle">{employee.gender}</td>
+                            <td className="align-middle">{employee.cell}</td>
+                            <td className="align-middle">{employee.email}</td>
+                            <td className="align-middle"></td>
                         </tr>
                         )
                     })}
