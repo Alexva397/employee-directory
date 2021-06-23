@@ -2,6 +2,15 @@ const SearchForm = (props) => {
     return (
         <form className="form-inline m-4">
             <div className="input-group mb-3">
+                {/* <div className="input-group-prepend">
+                    <select className="form-control">
+                        <option>Last Name</option>
+                        <option>First Name</option>
+                        <option>Email</option>
+                        <option>Phone</option>
+                        <option>Gender</option>
+                    </select>
+                </div> */}
                 <input 
                     type="search"
                     name="search"

@@ -23,22 +23,22 @@ const EmployeeTable = (props) => {
                                 onClick={() => props.sortEmployees("email")}
                             >Email </span><i className="fas fa-sort-down align-top"></i>
                         </th>
-                        <th scope="col">Address</th>
+                        {/* <th scope="col">Address</th> */}
                     </tr>
                 </thead>
                 <tbody>
                     {props.filteredEmployees.map((employee) => {
                         return (
-                        <tr key={employee.login.uuid}>
-                            <td className="align-middle"><img src={employee.picture.thumbnail} alt={employee.name.last}></img></td>
-                            <td className="align-middle">{employee.name.last}</td>
-                            <td className="align-middle">{employee.name.first}</td>
-                            <td className="align-middle">{employee.dob.date}</td>
-                            <td className="align-middle">{employee.gender}</td>
-                            <td className="align-middle">{employee.cell}</td>
-                            <td className="align-middle">{employee.email}</td>
-                            <td className="align-middle"></td>
-                        </tr>
+                            <tr key={employee.login.uuid}>
+                                <td className="align-middle"><img src={employee.picture.thumbnail} alt={employee.name.last}></img></td>
+                                <td className="align-middle">{employee.name.last}</td>
+                                <td className="align-middle">{employee.name.first}</td>
+                                <td className="align-middle">{employee.dob.date}</td>
+                                <td className="align-middle">{employee.gender}</td>
+                                <td className="align-middle">{employee.cell}</td>
+                                <td className="align-middle">{employee.email}</td>
+                                <td className="align-middle"></td>
+                            </tr>
                         )
                     })}
                 </tbody>
