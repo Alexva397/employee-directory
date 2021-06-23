@@ -10,7 +10,11 @@ const EmployeeTable = (props) => {
                                 onClick={() => props.sortEmployees("last")}
                             >Last Name</span>
                         </th>
-                        <th scope="col">First Name</th>
+                        <th scope="col">
+                            <span
+                                onClick={() => props.sortEmployees("first")}
+                            >First Name</span>
+                        </th>
                         <th scope="col">DOB</th>
                         <th scope="col">Gender</th>
                         <th scope="col">Cell Phone</th>

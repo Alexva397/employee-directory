@@ -63,13 +63,18 @@ class EmployeeContainer extends Component {
 
 
     sortEmployees = (input) => {
-        console.log(input)
        let sortedEmployees = this.state.filteredEmployees.sort((a, b) => {
          a = a.name[input];
-         b = b[input]; 
-         console.log(a)
+         b = b.name[input]; 
 
-         return a.localeCompare(b);
+        //  return a.localeCompare(b);
+        if (a > b) {
+            return 1;
+        }
+        if (a < b) {
+            return -1;
+        }
+        return 0;
        }); 
 
        this.setState({
