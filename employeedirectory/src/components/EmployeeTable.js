@@ -5,7 +5,11 @@ const EmployeeTable = (props) => {
                 <thead className="thead-dark">
                     <tr>
                         <th scope="col">Photo</th>
-                        <th scope="col">Last Name</th>
+                        <th scope="col">
+                            <span
+                                onClick={() => props.sortEmployees("last")}
+                            >Last Name</span>
+                        </th>
                         <th scope="col">First Name</th>
                         <th scope="col">DOB</th>
                         <th scope="col">Gender</th>

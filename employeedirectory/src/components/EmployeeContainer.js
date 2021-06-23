@@ -14,6 +14,8 @@ class EmployeeContainer extends Component {
 
     };
 
+
+
     componentDidMount() {
         API.generateRandom()
         .then(res => {
@@ -60,9 +62,20 @@ class EmployeeContainer extends Component {
 
 
 
-    // sortEmployees = (input) => {
+    sortEmployees = (input) => {
+        console.log(input)
+       let sortedEmployees = this.state.filteredEmployees.sort((a, b) => {
+         a = a.name[input];
+         b = b[input]; 
+         console.log(a)
 
-    // };
+         return a.localeCompare(b);
+       }); 
+
+       this.setState({
+           filteredEmployees: sortedEmployees
+       })
+    };
 
 
 
@@ -70,7 +83,7 @@ class EmployeeContainer extends Component {
     render() {
         return (
             <>
-                <SearchForm 
+                <SearchForm
                     handleInputChange={this.handleInputChange}
                     handleFormSubmit={this.handleFormSubmit}
                 />
@@ -78,6 +91,7 @@ class EmployeeContainer extends Component {
                     headers={this.state.headers}
                     employees={this.state.employees}
                     filteredEmployees={this.state.filteredEmployees}
+                    sortEmployees={this.sortEmployees}
                 />
             </>
         );
