@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import API from './utils/API';
-import EmployeeTable from './EmployeeTable';
-import SearchForm from './SearchForm';
+import React, { Component } from "react";
+import API from "./utils/API";
+import EmployeeTable from "./EmployeeTable";
+import SearchForm from "./SearchForm";
 
 
 class EmployeeContainer extends Component {
     state = {
         headers: [],
         employees: [],
-        order: 'descend',
-        search: '',
+        order: "descend",
+        search: "",
         filteredEmployees: [],
 
     };
