@@ -5,6 +5,12 @@
 
 
 
+![Screenshot1](./assets/images/screenshot1.png)
+
+
+
+![Screenshot2](./assets/images/screenshot2.png)
+
 
 
 ## [Test Out The Employee Tracker Here!](https://alexva397.github.io/employee-directory/)
