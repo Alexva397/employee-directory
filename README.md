@@ -5,11 +5,6 @@
 
 
 
-![Screenshot1](./assets/images/screenshot1.png)
-
-
-
-![Screenshot2](./assets/images/screenshot2.png)
 
 
 
@@ -37,6 +32,14 @@ You can test my employee tracker at the link above, or follow the instructions i
 - [License](#license)
 - [Tests](#test)
 - [Questions](#questions)
+
+
+
+![Screenshot1](./assets/images/screenshot1.png)
+
+
+
+![Screenshot2](./assets/images/screenshot2.png)
 
 
 
