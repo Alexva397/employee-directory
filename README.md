@@ -16,7 +16,7 @@
 
 This React App is an employee directory tha allows the user to search and sort for easy navigation.
 
-This repo utilizes a random user API to simulate a list employees at a business.
+This repo utilizes a random user API to simulate a list of employees for a business.
 
 You can test my employee tracker at the link above, or follow the instructions in installation/usage to run on your local machine. 
 
